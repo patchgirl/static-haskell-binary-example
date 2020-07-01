@@ -1,0 +1,21 @@
+diff --git a/survey/default.nix b/survey/default.nix
+index 828beaa..e740c05 100644
+--- a/survey/default.nix
++++ b/survey/default.nix
+@@ -1034,6 +1034,16 @@ let
+                   super.pg-harness-server
+                   [ final.openssl final.postgresql ]
+                   "--libs libpq";
++              hello-world-lib =
++                addStaticLinkerFlagsWithPkgconfig
++                  super.hello-world-lib
++                  [ final.openssl final.postgresql ]
++                  "--libs libpq";
++              hello-world-app =
++                addStaticLinkerFlagsWithPkgconfig
++                  super.hello-world-app
++                  [ final.openssl final.postgresql ]
++                  "--libs libpq";
+               postgresql-orm =
+                 addStaticLinkerFlagsWithPkgconfig
+                   super.postgresql-orm
