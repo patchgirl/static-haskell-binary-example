@@ -1,0 +1,10 @@
+name: hello-world-app
+
+executables:
+  hello-world-app-exe:
+    main: app/Main.hs
+    dependencies:
+    - hello-world-lib
+
+dependencies:
+  - base

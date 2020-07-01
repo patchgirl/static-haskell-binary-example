@@ -1,0 +1,20 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: c593caa7e66d1200718fd613b9e678b318f596707579f03ab9f13d1e2c281904
+
+name:           hello-world-app
+version:        0.0.0
+build-type:     Simple
+
+executable hello-world-app-exe
+  main-is: app/Main.hs
+  other-modules:
+      Paths_hello_world_app
+  build-depends:
+      base
+    , hello-world-lib
+  default-language: Haskell2010

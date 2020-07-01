@@ -1,0 +1,9 @@
+name: hello-world-lib
+
+library:
+  source-dirs:
+    - src
+
+dependencies:
+  - base
+  - postgresql-simple
